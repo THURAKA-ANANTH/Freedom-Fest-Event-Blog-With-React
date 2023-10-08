@@ -1,24 +1,33 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import MediaCard from './Mediacard';
+import OurJourney from './OurJourney';
+import Home from './Home';
+import Navbar from './Navbar';
+import Footer from './Footer';
+import { Element } from 'react-scroll';
+import MediaCard2 from './Mediacard2';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <Element name="home">
+        <Home />
+      </Element>
+      <Element name="our-journey">
+        <OurJourney />
+      </Element>
+      <Element name="workshops">
+        <MediaCard />
+      </Element>
+      <Element name="non-tech">
+        <MediaCard2 />
+      </Element>
+
+      <Footer />
+    </>
   );
 }
 
