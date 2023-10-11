@@ -9,9 +9,9 @@ import Box from '@mui/material/Box';
 
 const cardData = [
   {
-    title: 'Paper Presentation',
-    description: 'Introduces Students to the fundamentals of web development.\n Discover HTML for structuring content, CSS for styling, and JavaScript for interactivity.',
-    image: 'https://nebulus.aitm.edu.in/wp-content/uploads/2016/03/Paper-Presentation.jpg',
+    title: 'Coding Challenge',
+    topics: ['Coding', 'Challenge', 'Programming'],
+    image: 'https://roj.com/public/roj/Jobs/_1180x443_crop_center-center_none/header-eventbrite.jpg',
   },
   {
     title: 'Arduino',
@@ -62,50 +62,46 @@ const cardData = [
 export default function MediaCard() {
   return (
     <Box
-      display="flex"
-      flexDirection="column"
-      alignItems="center"
-      
-      
-      sx={{
-        background: "#c31432",  
-        background: "-webkit-linear-gradient(to right, #240b36, #c31432)",  
-        background: "linear-gradient(to right, #240b36, #c31432)",
-      }}
-    >
-      <Typography gutterBottom variant="h5" component="div" sx={{ fontWeight: 700 }}>
-        WorkShops
-      </Typography>
+    display="flex"
+    flexDirection="column"
+    alignItems="center"
+    sx={{
+      background: "#c31432",
+      background: "-webkit-linear-gradient(to right, #240b36, #c31432)",
+      background: "linear-gradient(to right, #240b36, #c31432)",
+    }}
+  >
+    <Typography gutterBottom variant="h5" component="div" sx={{ fontWeight: 700, color: "white", fontSize: "35px" }}>
+      Technical Events
+    </Typography>
 
-      <Box display="flex" flexWrap="wrap" justifyContent="space-around" width="100%">
-        {cardData.map((card, index) => (
-          <Card key={index} sx={{ maxWidth: 345, marginBottom: 2, flexBasis: 'calc(100% - 16px)' }}>
-            <CardMedia
-              sx={{  height: 150, display: 'flex', justifyContent: 'center' }}
-              image={card.image}
-              title={card.title}
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h4"  component="div">
-                {card.title}
-              </Typography>
-              <Typography variant="body2" color="text.secondary" sx={{ padding: '16px' }}>
-                <ul>
-                  {card.description.split('\n').map((item, index) => (
-                    <li key={index} style={{ marginBottom: '8px' }}>{item}</li>
-                  ))}
-                </ul>
-              </Typography>
+    <Box display="flex" flexWrap="wrap" justifyContent="space-around" width="100%">
+      {cardData.map((card, index) => (
+        <Card key={index} sx={{ maxWidth: 345, marginBottom: 2, flexBasis: 'calc(100% - 16px)' }}>
+          <CardMedia
+            sx={{ height: 150, display: 'flex', justifyContent: 'center' }}
+            image={card.image}
+            title={card.title}
+          />
+          <CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+         <Typography gutterBottom variant="h4" component="div" sx={{ textAlign: 'center' }}>
+             {card.title}
+          </Typography>
+          {card.topics && (
+          <Typography variant="body2" color="textSecondary" sx={{ textAlign: 'center', fontWeight: '700' }}>
+              Topics: {card.topics.join(", ")}
+            </Typography>
+          )}
             </CardContent>
-            <CardActions sx={{ display: 'flex', justifyContent: 'center', transition: 'all 0.3s' }}>
-                <Button size="small" sx={{ padding:1, transition: 'background-color 0.3s', '&:hover': { backgroundColor: '#FFA500' } }}>
-                    Register Here
-              </Button>
-            </CardActions>
 
-          </Card>
-        ))}
-      </Box>
+          <CardActions sx={{ display: 'flex', justifyContent: 'center', transition: 'all 0.3s' }}>
+            <Button size="small" sx={{ padding: 1, transition: 'background-color 0.3s', '&:hover': { backgroundColor: '#FFA500' } }}>
+              Register Here
+            </Button>
+          </CardActions>
+        </Card>
+      ))}
     </Box>
-  );
+  </Box>
+);
 }

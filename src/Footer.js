@@ -1,6 +1,6 @@
 import React from 'react';
 import { AppBar, Toolbar, IconButton, Container, Grid, Typography } from '@mui/material';
-import { Facebook, Instagram, Google, Telegram } from '@mui/icons-material';
+import { Facebook, Instagram, Telegram, Phone } from '@mui/icons-material';
 
 const Footer = () => {
   return (
@@ -9,22 +9,11 @@ const Footer = () => {
         <Toolbar>
           <Grid container justifyContent="center" alignItems="center">
             <Grid item>
-              <Typography variant="h6" style={{ color: 'white',marginRight:"1rem" }}>
+              <Typography variant="h6" style={{ color: 'white', marginRight: "1rem" }}>
                 Follow us on:
               </Typography>
             </Grid>
             <Grid item>
-              <IconButton
-                edge="start"
-                color="inherit"
-                aria-label="Facebook"
-                href="https://www.facebook.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ fontSize: '32px' }} // Increase icon size
-              >
-                <Facebook />
-              </IconButton>
             </Grid>
             <Grid item>
               <IconButton
@@ -33,22 +22,38 @@ const Footer = () => {
                 href="https://www.instagram.com/swechaap/?hl=en"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ fontSize: '32px' }} // Increase icon size
+                style={{ fontSize: '32px' }}
               >
                 <Instagram />
               </IconButton>
             </Grid>
-            
+
             <Grid item>
               <IconButton
                 color="inherit"
                 aria-label="Telegram"
-                href="https://telegram.org/"
+                href="https://t.me/freedomfest2023"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ fontSize: '32px' }} // Increase icon size
+                style={{ fontSize: '32px' }}
               >
                 <Telegram />
+              </IconButton>
+            </Grid>
+
+            <Grid item>
+              <Typography variant="h6" style={{ color: 'white', marginLeft: "1rem" }}>
+                Contact Us: 
+              </Typography>
+            </Grid>
+            <Grid item>
+              <IconButton
+                color="inherit"
+                aria-label="Phone"
+                href="tel:7730896829" // Replace with your phone number
+                style={{ fontSize: '32px' }}
+              >
+                <Phone />
               </IconButton>
             </Grid>
           </Grid>

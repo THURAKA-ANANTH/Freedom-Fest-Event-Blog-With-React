@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import List from '@mui/material/List';
@@ -10,7 +9,7 @@ import ListItemText from '@mui/material/ListItemText';
 import Drawer from '@mui/material/Drawer';
 import CloseIcon from '@mui/icons-material/Close';
 import ListItemIcon from '@mui/material/ListItemIcon';
-import { Link as ScrollLink } from 'react-scroll'; // Import ScrollLink
+import { Link as ScrollLink } from 'react-scroll';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -28,17 +27,17 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar position="fixed" color="primary" sx={{ backgroundColor: 'black',maxHeight: '100vh' }}>
+    <AppBar position="fixed" color="primary" sx={{ backgroundColor: 'white', maxHeight: '100vh' }}>
       <Toolbar>
-        <Typography variant="h4" component="div" sx={{ flexGrow: 1, color: '#00df9a', fontWeight: 1000 }}>
-          NECG SLC
-        </Typography>
+        <div style={{ width: '100px', height: 'auto', marginRight: 'auto' }}>
+          <img alt="NECG SLC Logo" src="images/swecha.png" style={{ width: '100%', height: '100%' }} />
+        </div>
         {isMobileScreen() ? (
-          <IconButton onClick={handleNav}>
+          <IconButton onClick={handleNav} sx={{ color: 'black', marginLeft: 'auto' }}>
             {nav ? (
               <CloseIcon color="inherit" onClick={handleCloseNav} />
             ) : (
-              <MenuIcon sx={{ color: '#fff', marginRight:3 }} />
+              <MenuIcon sx={{marginRight:3}}/>
             )}
           </IconButton>
         ) : (
@@ -48,29 +47,33 @@ const Navbar = () => {
               flexDirection: 'row',
               alignItems: 'center',
               gap: '24px',
-              marginLeft: 'auto',
             }}
           >
-            <ScrollLink to="home" spy={true} smooth={true} offset={-70} duration={500}>
-              <ListItem button>
-                <ListItemText primary="Home" />
-              </ListItem>
-            </ScrollLink>
-            <ScrollLink to="our-journey" spy={true} smooth={true} offset={-70} duration={500}>
-              <ListItem button>
-                <ListItemText primary="Our Journey" />
-              </ListItem>
-            </ScrollLink>
-            <ScrollLink to="workshops" spy={true} smooth={true} offset={-70} duration={500}>
-              <ListItem button>
-                <ListItemText primary="Workshops" />
-              </ListItem>
-            </ScrollLink>
-            <ScrollLink to="non-tech" spy={true} smooth={true} offset={-70} duration={500}>
-              <ListItem button>
-                <ListItemText primary="Non-Technical Events" />
-              </ListItem>
-            </ScrollLink>
+             <ScrollLink to="home" spy={true} smooth={true} offset={-70} duration={500}>
+            <ListItem button>
+              <ListItemText primary="Home" sx={{color:"black"}}/>
+            </ListItem>
+          </ScrollLink>
+          <ScrollLink to="our-journey" spy={true} smooth={true} offset={-70} duration={500}>
+            <ListItem button>
+              <ListItemText primary="Our Journey" sx={{color:"black"}}/>
+            </ListItem>
+          </ScrollLink>
+          <ScrollLink to="workshops" spy={true} smooth={true} offset={-70} duration={500}>
+            <ListItem button>
+              <ListItemText primary="Workshops" sx={{color:"black"}}/>
+            </ListItem>
+          </ScrollLink>
+          <ScrollLink to="tech" spy={true} smooth={true} offset={-70} duration={500}>
+            <ListItem button>
+              <ListItemText primary="Technical Events" sx={{color:"black"}}/>
+            </ListItem>
+          </ScrollLink>
+          <ScrollLink to="non-tech" spy={true} smooth={true} offset={-70} duration={500}>
+            <ListItem button>
+              <ListItemText primary="Literary Events" sx={{color:"black"}}/>
+            </ListItem>
+          </ScrollLink>
           </List>
         )}
       </Toolbar>
@@ -96,9 +99,14 @@ const Navbar = () => {
               <ListItemText primary="Workshops" />
             </ListItem>
           </ScrollLink>
+          <ScrollLink to="tech" spy={true} smooth={true} offset={-70} duration={500}>
+            <ListItem button>
+              <ListItemText primary="Technical Events" />
+            </ListItem>
+          </ScrollLink>
           <ScrollLink to="non-tech" spy={true} smooth={true} offset={-70} duration={500}>
             <ListItem button>
-              <ListItemText primary="Non-Technical Events" />
+              <ListItemText primary="Literary Events" />
             </ListItem>
           </ScrollLink>
         </List>
