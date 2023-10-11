@@ -1,6 +1,6 @@
 import React from 'react';
 import { AppBar, Toolbar, IconButton, Container, Grid, Typography } from '@mui/material';
-import { Facebook, Instagram, Telegram, Phone } from '@mui/icons-material';
+import {  Instagram, Telegram, Phone } from '@mui/icons-material';
 
 const Footer = () => {
   return (

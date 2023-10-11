@@ -33,13 +33,14 @@ const Navbar = () => {
           <img alt="NECG SLC Logo" src="images/swecha.png" style={{ width: '100%', height: '100%' }} />
         </div>
         {isMobileScreen() ? (
-          <IconButton onClick={handleNav} sx={{ color: 'black', marginLeft: 'auto' }}>
-            {nav ? (
-              <CloseIcon color="inherit" onClick={handleCloseNav} />
-            ) : (
-              <MenuIcon sx={{marginRight:3}}/>
-            )}
-          </IconButton>
+          <IconButton onClick={nav ? handleCloseNav : handleNav} sx={{ color: 'black', marginLeft: 'auto' }}>
+  {nav ? (
+    <CloseIcon color="inherit" />
+  ) : (
+    <MenuIcon sx={{ marginRight: 3 }} />
+  )}
+</IconButton>
+
         ) : (
           <List
             sx={{
