@@ -37,7 +37,7 @@ const Navbar = () => {
   {nav ? (
     <CloseIcon color="inherit" />
   ) : (
-    <MenuIcon sx={{ marginRight: 3 }} />
+    <MenuIcon sx={{ marginRight: 2 }} />
   )}
 </IconButton>
 

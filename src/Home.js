@@ -12,7 +12,7 @@ const Home = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setScrollingNoteVisible(false);
-    }, 15000); // Hide the note after 10 seconds
+    }, 20000); // Hide the note after 20 seconds
 
     return () => clearTimeout(timeout);
   }, []);
@@ -76,7 +76,7 @@ const Home = () => {
               marginBottom: '20px',
             }}
           >
-            <Typography variant="h1" style={{ fontSize: '4rem', fontWeight: 'bold', marginTop: 30 }}>
+            <Typography variant="h1" style={{ fontSize: '3.5rem', fontWeight: 'bold', marginTop: 28 }}>
               Freedom Fest
             </Typography>
 
@@ -89,7 +89,7 @@ const Home = () => {
                 justifyContent: 'center',
               }}
             >
-              <Typography variant="h3" style={{ fontSize: '1.6rem', fontWeight: 700, color: "yellow" }}>
+              <Typography variant="h3" style={{ fontSize: '1.5rem', fontWeight: 600, color: "yellow" }}>
                 Held On: 18th Oct - 19th Oct
               </Typography>
               <Typography variant="h3" style={{ fontSize: '1.6rem', fontWeight: 700, color: "yellow" }}>
@@ -101,7 +101,7 @@ const Home = () => {
             </Button>
 
             <ScrollLink to="our-journey" smooth={true} duration={500} offset={-70}>
-              <Typography variant="h4" style={{ fontSize: '1.4rem', color: 'silver', marginTop: '20px', cursor: 'pointer' }}>
+              <Typography variant="h4" style={{ fontSize: '1.4rem', color: 'silver', marginTop: '15px', cursor: 'pointer' }}>
                 Click To Know More
               </Typography>
             </ScrollLink>
