@@ -49,6 +49,7 @@ const OurJourney = () => {
                   width="100%"
                   image ={image}
                   title={`Image ${index + 1}`}
+                  loading="lazy"
                 />
               </Card>
             </LazyLoad>

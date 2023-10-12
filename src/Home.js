@@ -11,15 +11,16 @@ const Home = () => {
     <div style={{ background: "#000000", background: "-webkit-linear-gradient(to right, #000000, #434343)", background: "linear-gradient(to right, #000000, #434343)", color: 'white', minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
       <Container maxWidth="md">
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
-          <LazyLoad height={200}>
+          <LazyLoad height={250}>
             <img
               src="images/OpenSourceTree.png"
               alt="Freedom Fest Image"
-              style={{ maxWidth: '100%', height: 'auto', marginBottom: '30px' }}
+              style={{ maxWidth: '100%', height: '350px', marginBottom: '20px' }}
+              loading="lazy"
             />
           </LazyLoad>
           <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
-            <Typography variant="h1" style={{ fontSize: '4rem', fontWeight: 'bold', marginTop:20}}>
+            <Typography variant="h1" style={{ fontSize: '4rem', fontWeight: 'bold', marginTop: 30}}>
               Freedom Fest
             </Typography>
 

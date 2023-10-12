@@ -26,17 +26,17 @@ const cardData = [
   {
     title:'Penpot',
     description:"Explore Penpot, an open-source design and prototyping platform for graphic and UX/UI designers.\n Discover how to create and collaborate on design projects, from wireframes to interactive prototypes.\n  Engage in practical exercises to unleash your design skills and effectively use Penpot for innovative design solutions.",
-    image:'images/Penpot-logo.webp'
+    image:'images/penpot.jpg'
   },
   {
     title:'Blender',
     description:"Create 3D models of anything from simple objects to complex characters and environments.\nAnimate 3D models to create character animations, motion graphics, and special effects.\nRender 3D models and animations to realistic or stylized images and videos.",
-    image:'images/Blender.jpg'
+    image:'images/blender.jpg'
   },
   {
     title:'Inkscape',
     description:"Create 3D models of anything from simple objects to complex characters and environments.\nAnimate 3D models to create character animations, motion graphics, and special effects.\nRender 3D models and animations to realistic or stylized images and videos.",
-    image:'https://idroot.us/wp-content/uploads/2021/06/inkscape-logo.png'
+    image:'images/inkscape.png'
   },
   {
     title: 'Arduino',
@@ -64,6 +64,11 @@ const cardData = [
   description:'Delve into the foundational concepts of Git, a distributed version control system.\n Understand how Git facilitates teamwork and version tracking in software projects.\n Learn to create repositories, commit changes, and collaborate efficiently through practical exercises, enhancing your Git proficiency.',
   image:'images/git.png',
   },
+  {
+    title:'Tech For Rural India',
+    description:'Engineers turn ideas into reality, pushing limits.\n They bridge the digital gap, providing access to technology for all.\nTechnology shapes society, engineers craft solutions for progress.',
+    image:'images/techforruralindia.jpeg',
+    },
   
   
   
@@ -79,6 +84,7 @@ export default function MediaCard() {
     // Redirect to the Razorpay URL when the button is clicked
     window.location.href = 'https://pages.razorpay.com/freedomfestnecg#view-1';
   };
+
   return (
     <Box
       display="flex"
@@ -87,12 +93,12 @@ export default function MediaCard() {
       marginTop={5}
       py={2}
       sx={{
-        background: "#c31432",  
-        background: "-webkit-linear-gradient(to right, #240b36, #c31432)",  
+        background: "#c31432",
+        background: "-webkit-linear-gradient(to right, #240b36, #c31432)",
         background: "linear-gradient(to right, #240b36, #c31432)",
       }}
     >
-      <Typography gutterBottom variant="h5" component="div" sx={{ fontWeight: 700, color:"white", fontSize:"35px",marginBottom:5 }}>
+      <Typography gutterBottom variant="h5" component="div" sx={{ fontWeight: 700, color: "white", fontSize: "35px", marginBottom: 5, textAlign: 'center' }}>
         WorkShops
       </Typography>
 
@@ -100,13 +106,12 @@ export default function MediaCard() {
         {cardData.map((card, index) => (
           <Card key={index} sx={{ maxWidth: 345, marginBottom: 5, flexBasis: 'calc(100% - 16px)' }}>
             <CardMedia
-              sx={{  height: 180, display: 'flex', justifyContent: 'center' }}
+              sx={{ height: 180, display: 'flex', justifyContent: 'center' }}
               image={card.image}
               title={card.title}
-              
             />
             <CardContent>
-              <Typography gutterBottom variant="h4"  component="div">
+              <Typography gutterBottom variant="h4" component="div" sx={{ textAlign: 'center',  fontWeight:600}}>
                 {card.title}
               </Typography>
               <Typography variant="body2" color="text.secondary" sx={{ padding: '16px' }}>
@@ -118,11 +123,10 @@ export default function MediaCard() {
               </Typography>
             </CardContent>
             <CardActions sx={{ display: 'flex', justifyContent: 'center', transition: 'all 0.3s' }}>
-                <Button size="small"sx={{ padding:1, transition: 'background-color 0.3s', '&:hover': { backgroundColor: '#FFA500' } }}  onClick={redirectToRazorpay}>
-                    Register Here
+              <Button size="small" sx={{ padding: 1, transition: 'background-color 0.3s', '&:hover': { backgroundColor: '#FFA500' } }} onClick={redirectToRazorpay}>
+                Register Here
               </Button>
             </CardActions>
-
           </Card>
         ))}
       </Box>
