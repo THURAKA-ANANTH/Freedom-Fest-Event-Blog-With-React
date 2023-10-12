@@ -27,6 +27,8 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 If it ready add the build folder to custom domain and host it.
-Note : I  have attached the build folder to git if you need any changes delete the build folder and again run the command in terminal "npm run build" to host your custom website to required domain.
+
+## `Note`:
+ I  have attached the build folder to git if you need any changes delete the build folder and again run the command in terminal "npm run build" to host your custom website to required domain.
 
 
