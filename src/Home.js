@@ -76,7 +76,7 @@ const Home = () => {
               marginBottom: '20px',
             }}
           >
-            <Typography variant="h1" style={{ fontSize: '3.5rem', fontWeight: 'bold', marginTop: 28 }}>
+            <Typography variant="h1" style={{ fontSize: '3.5rem', fontWeight: 'bold', marginTop: 25 }}>
               Freedom Fest
             </Typography>
 
@@ -92,7 +92,7 @@ const Home = () => {
               <Typography variant="h3" style={{ fontSize: '1.5rem', fontWeight: 600, color: "yellow" }}>
                 Held On: 18th Oct - 19th Oct
               </Typography>
-              <Typography variant="h3" style={{ fontSize: '1.6rem', fontWeight: 700, color: "yellow" }}>
+              <Typography variant="h3" style={{ fontSize: '1.5rem', fontWeight: 600, color: "yellow" }}>
                 Venue: NEC GUDUR
               </Typography>
             </div>

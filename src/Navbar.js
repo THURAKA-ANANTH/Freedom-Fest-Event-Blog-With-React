@@ -3,6 +3,7 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import Button from '@mui/material/Button';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
@@ -25,6 +26,10 @@ const Navbar = () => {
   const isMobileScreen = () => {
     return window.innerWidth < 600;
   };
+  const redirectToRazorpay = () => {
+    // Redirect to the Razorpay URL when the button is clicked
+    window.location.href = 'https://pages.razorpay.com/freedomfestnecg#view-1';
+  };
 
   return (
     <AppBar position="fixed" color="primary" sx={{ backgroundColor: 'white', maxHeight: '100vh' }}>
@@ -33,14 +38,16 @@ const Navbar = () => {
           <img alt="NECG SLC Logo" src="images/swecha.png" style={{ width: '100%', height: '100%' }} loading='lazy' />
         </div>
         {isMobileScreen() ? (
-          <IconButton onClick={nav ? handleCloseNav : handleNav} sx={{ color: 'black', marginLeft: 'auto' }}>
-  {nav ? (
-    <CloseIcon color="inherit" />
-  ) : (
-    <MenuIcon sx={{ marginRight: 2 }} />
-  )}
-</IconButton>
-
+          <>
+            <IconButton onClick={nav ? handleCloseNav : handleNav} sx={{ color: 'black', marginLeft: 'auto' }}>
+              {nav ? (
+                <CloseIcon color="inherit" />
+              ) : (
+                <MenuIcon sx={{ marginRight: 2 }} />
+              )}
+            </IconButton>
+          
+          </>
         ) : (
           <List
             sx={{
@@ -50,12 +57,12 @@ const Navbar = () => {
               gap: '24px',
             }}
           >
-             <ScrollLink to="home" spy={true} smooth={true} offset={-70} duration={500}>
-            <ListItem button>
-              <ListItemText primary="Home" sx={{color:"black"}}/>
-            </ListItem>
-          </ScrollLink>
-          <ScrollLink to="our-journey" spy={true} smooth={true} offset={-70} duration={500}>
+            <ScrollLink to="home" spy={true} smooth={true} offset={-70} duration={500}>
+              <ListItem button>
+                <ListItemText primary="Home" sx={{ color: "black" }} />
+              </ListItem>
+            </ScrollLink>
+            <ScrollLink to="our-journey" spy={true} smooth={true} offset={-70} duration={500}>
             <ListItem button>
               <ListItemText primary="Our Journey" sx={{color:"black"}}/>
             </ListItem>
@@ -83,6 +90,7 @@ const Navbar = () => {
           </List>
         )}
       </Toolbar>
+
       <Drawer anchor="right" open={nav} onClose={handleCloseNav} sx={{ '& .MuiDrawer-paper': { width: '60%' } }}>
         <List>
           <ListItem button onClick={handleCloseNav}>
@@ -100,28 +108,31 @@ const Navbar = () => {
               <ListItemText primary="Our Journey" />
             </ListItem>
           </ScrollLink>
-          <ScrollLink to="workshops" spy={true} smooth={true} offset={-70} duration={500}>
+          <ScrollLink to="workshops" spy={true} smooth={true} offset={-50} duration={500}>
             <ListItem button>
               <ListItemText primary="Workshops" />
             </ListItem>
           </ScrollLink>
-          <ScrollLink to="tech" spy={true} smooth={true} offset={-70} duration={500}>
+          <ScrollLink to="tech" spy={true} smooth={true} offset={-50} duration={500}>
             <ListItem button>
               <ListItemText primary="Technical Events" />
             </ListItem>
           </ScrollLink>
-          <ScrollLink to="non-tech" spy={true} smooth={true} offset={-70} duration={500}>
+          <ScrollLink to="non-tech" spy={true} smooth={true} offset={-50} duration={500}>
             <ListItem button>
               <ListItemText primary="Literary Events" />
             </ListItem>
           </ScrollLink>
-          <ScrollLink to="contact" spy={true} smooth={true} offset={-70} duration={500}>
+          <ScrollLink to="contact" spy={true} smooth={true} offset={-50} duration={500}>
             <ListItem button>
               <ListItemText primary="Contact Us" />
             </ListItem>
           </ScrollLink>
-          
+
         </List>
+        <Button variant="contained" color="primary" sx={{ marginLeft: 1,marginRight:1 }}  onClick={redirectToRazorpay}>
+              Register
+        </Button>
       </Drawer>
     </AppBar>
   );

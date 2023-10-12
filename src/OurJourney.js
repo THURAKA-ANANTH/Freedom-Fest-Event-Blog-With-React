@@ -7,14 +7,14 @@ import LazyLoad from 'react-lazy-load';
 import './InfiniteImageSlider.css'; // Import a custom CSS file for styling
 
 const images = [
-  'images/1A551B06-DD02-47F3-8F6A-7B2D6EDE5993 (1).jpeg',
-  'images/2D7EB9F1-52BF-4D50-ACFC-35472F37EDCE.jpeg',
-  'images/93EF14F1-053B-4B90-8CD8-381D203C4F2A.jpeg',
-  'images/99DEDC5E-7754-44F3-A5AA-26CEB129BDD3.jpeg',
-  'images/B1F8610F-0A7A-4BDF-A0C6-0B87574D490F.jpeg',
-  'images/bf61ab3e-1b29-4f8d-9ac9-10184d8c07eb.jpg',
-  'images/IMG_7370.jpg',
-  'images/IMG_9094.jpg'
+  'images/1A551B06-DD02-47F3-8F6A-7B2D6EDE5993 (1).webp',
+  'images/2D7EB9F1-52BF-4D50-ACFC-35472F37EDCE.webp',
+  'images/93EF14F1-053B-4B90-8CD8-381D203C4F2A.webp',
+  'images/99DEDC5E-7754-44F3-A5AA-26CEB129BDD3.webp',
+  'images/B1F8610F-0A7A-4BDF-A0C6-0B87574D490F.webp',
+  'images/IMG_7370.webp',
+  'images/IMG_7507.webp',
+  'images/IMG_9094.webp'
 ];
 
 const OurJourney = () => {
