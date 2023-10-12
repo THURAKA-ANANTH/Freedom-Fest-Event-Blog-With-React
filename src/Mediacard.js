@@ -80,10 +80,7 @@ const cardData = [
 ];
 
 export default function MediaCard() {
-  const redirectToRazorpay = () => {
-    // Redirect to the Razorpay URL when the button is clicked
-    window.location.href = 'https://pages.razorpay.com/freedomfestnecg#view-1';
-  };
+ 
 
   return (
     <Box
@@ -114,19 +111,14 @@ export default function MediaCard() {
               <Typography gutterBottom variant="h4" component="div" sx={{ textAlign: 'center',  fontWeight:600}}>
                 {card.title}
               </Typography>
-              <Typography variant="body2" color="text.secondary" sx={{ padding: '16px' }}>
+              <Typography variant="body2" color="text.secondary" sx={{ padding: '16px',}}>
                 <ul>
                   {card.description.split('\n').map((item, index) => (
-                    <li key={index} style={{ marginBottom: '8px' }}>{item}</li>
+                    <li key={index} style={{ marginBottom: '5px' }}>{item}</li>
                   ))}
                 </ul>
               </Typography>
             </CardContent>
-            <CardActions sx={{ display: 'flex', justifyContent: 'center', transition: 'all 0.3s' }}>
-              <Button size="small" sx={{ padding: 1, transition: 'background-color 0.3s', '&:hover': { backgroundColor: '#FFA500' } }} onClick={redirectToRazorpay}>
-                Register Here
-              </Button>
-            </CardActions>
           </Card>
         ))}
       </Box>

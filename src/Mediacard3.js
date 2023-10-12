@@ -73,6 +73,7 @@ export default function MediaCard() {
               <Typography gutterBottom variant="h4" component="div" sx={{ textAlign: 'center',  fontWeight:600}}>
                 {card.title}
               </Typography>
+              {/* 
               <Typography variant="body2" color="text.secondary" sx={{ padding: '0px' }}>
                 <ul>
                   {card.description.split('\n').map((item, index) => (
@@ -80,12 +81,9 @@ export default function MediaCard() {
                   ))}
                 </ul>
               </Typography>
+                  */}
             </CardContent>
-            <CardActions sx={{ display: 'flex', justifyContent: 'center', transition: 'all 0.3s' }}>
-              <Button size="small" sx={{ margin:0, padding: 1, transition: 'background-color 0.3s', '&:hover': { backgroundColor: '#FFA500' } }} onClick={redirectToRazorpay}>
-                Register Here
-              </Button>
-            </CardActions>
+            
           </Card>
         ))}
       </Box>

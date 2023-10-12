@@ -32,7 +32,7 @@ const OurJourney = () => {
   };
 
   return (
-    <Box maxWidth={600} mx="auto">
+    <Box maxWidth={600} mx="auto" sx={{marginBottom:"50px"}}>
       {/* Add the main heading */}
       <Typography variant="h4" align="center" sx={{ fontWeight: 700, marginTop: 2 }} gutterBottom>
         Our Journey

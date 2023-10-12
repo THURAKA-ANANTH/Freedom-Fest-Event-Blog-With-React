@@ -8,6 +8,7 @@ import Footer from './Footer';
 import { Element } from 'react-scroll';
 import MediaCard2 from './Mediacard2';
 import MediaCard3 from './Mediacard3';
+import ButtonSection from './Buttonsection';
 
 function App() {
   const [showPreloader, setShowPreloader] = useState(true);
@@ -33,6 +34,7 @@ function App() {
           <Element name="our-journey">
             <OurJourney />
           </Element>
+          <ButtonSection/>
           <Element name="workshops">
             <MediaCard />
           </Element>
