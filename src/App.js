@@ -15,7 +15,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setShowPreloader(false);
-    }, 3000); // Adjust the delay as needed
+    }, 2000); // Adjust the delay as needed
   }, []);
 
   return (
@@ -42,7 +42,10 @@ function App() {
           <Element name="non-tech">
             <MediaCard3 />
           </Element>
-          <Footer />
+          <Element name="contact">
+            <Footer />
+          </Element>
+          
         </>
       )}
     </>

@@ -30,7 +30,7 @@ const Navbar = () => {
     <AppBar position="fixed" color="primary" sx={{ backgroundColor: 'white', maxHeight: '100vh' }}>
       <Toolbar>
         <div style={{ width: '100px', height: 'auto', marginRight: 'auto' }}>
-          <img alt="NECG SLC Logo" src="images/swecha.png" style={{ width: '100%', height: '100%' }} />
+          <img alt="NECG SLC Logo" src="images/swecha.png" style={{ width: '100%', height: '100%' }} loading='lazy' />
         </div>
         {isMobileScreen() ? (
           <IconButton onClick={nav ? handleCloseNav : handleNav} sx={{ color: 'black', marginLeft: 'auto' }}>
@@ -75,6 +75,11 @@ const Navbar = () => {
               <ListItemText primary="Literary Events" sx={{color:"black"}}/>
             </ListItem>
           </ScrollLink>
+          <ScrollLink to="contact" spy={true} smooth={true} offset={-70} duration={500}>
+            <ListItem button>
+              <ListItemText primary="Contact Us" sx={{color:"black"}}/>
+            </ListItem>
+          </ScrollLink>
           </List>
         )}
       </Toolbar>
@@ -110,6 +115,12 @@ const Navbar = () => {
               <ListItemText primary="Literary Events" />
             </ListItem>
           </ScrollLink>
+          <ScrollLink to="contact" spy={true} smooth={true} offset={-70} duration={500}>
+            <ListItem button>
+              <ListItemText primary="Contact Us" />
+            </ListItem>
+          </ScrollLink>
+          
         </List>
       </Drawer>
     </AppBar>

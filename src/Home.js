@@ -2,7 +2,7 @@ import React from 'react';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
+
 import { Link as ScrollLink } from 'react-scroll';
 
 const Home = () => {
@@ -11,8 +11,9 @@ const Home = () => {
       <Container maxWidth="md">
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
           <img
-            src="https://www.itsecurityguru.org/wp-content/uploads/2015/10/hosting-dens-free-website_development.png"
+            src="images/OpenSourceTree.png"
             alt="Freedom Fest Image"
+            loading='lazy'
             style={{ maxWidth: '100%', height: 'auto', marginBottom: '20px' }}
           />
           <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
