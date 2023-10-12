@@ -57,7 +57,7 @@ const Footer = () => {
                 </Grid>
                 {phoneNumbers.map((item, index) => (
                   <Grid item xs={12} sm={4} key={index}>
-                    <div style={{ display: 'flex', alignItems: 'center', marginLeft: "3rem" }}>
+                    <div style={{ display: 'flex', alignItems: 'center', marginLeft: "6rem" }}>
                       <IconButton
                         color="inherit"
                         aria-label={item.label}
