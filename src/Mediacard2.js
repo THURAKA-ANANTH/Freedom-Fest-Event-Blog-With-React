@@ -82,7 +82,7 @@ export default function MediaCard() {
             sx={{ height: 150, display: 'flex', justifyContent: 'center' }}
             image={card.image}
             title={card.title}
-            loading="lazy"
+            
           />
           <CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
          <Typography gutterBottom variant="h4" component="div" sx={{ textAlign: 'center' }}>

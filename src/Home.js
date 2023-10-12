@@ -13,7 +13,7 @@ const Home = () => {
           <img
             src="images/OpenSourceTree.png"
             alt="Freedom Fest Image"
-            loading='lazy'
+            
             style={{ maxWidth: '100%', height: 'auto', marginBottom: '20px' }}
           />
           <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>

@@ -13,7 +13,6 @@ const images = [
   'images/B1F8610F-0A7A-4BDF-A0C6-0B87574D490F.jpeg',
   'images/bf61ab3e-1b29-4f8d-9ac9-10184d8c07eb.jpg',
   'images/IMG_7370.jpg',
-  'images/IMG_7370.jpg',
   'images/IMG_9094.jpg'
 ];
 
@@ -49,7 +48,7 @@ const OurJourney = () => {
                 width="200"
                 image={image}
                 title={`Image ${index + 1}`}
-                loading="lazy" 
+                 
               />
             </Card>
           </div>
