@@ -2,6 +2,7 @@ import React from 'react';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
+import LazyLoad from 'react-lazy-load';
 
 import { Link as ScrollLink } from 'react-scroll';
 
@@ -10,14 +11,15 @@ const Home = () => {
     <div style={{ background: "#000000", background: "-webkit-linear-gradient(to right, #000000, #434343)", background: "linear-gradient(to right, #000000, #434343)", color: 'white', minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
       <Container maxWidth="md">
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
-          <img
-            src="images/OpenSourceTree.png"
-            alt="Freedom Fest Image"
-            
-            style={{ maxWidth: '100%', height: 'auto', marginBottom: '20px' }}
-          />
-          <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-            <Typography variant="h1" style={{ fontSize: '4rem', fontWeight: 'bold' }}>
+          <LazyLoad height={200}>
+            <img
+              src="images/OpenSourceTree.png"
+              alt="Freedom Fest Image"
+              style={{ maxWidth: '100%', height: 'auto', marginBottom: '30px' }}
+            />
+          </LazyLoad>
+          <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
+            <Typography variant="h1" style={{ fontSize: '4rem', fontWeight: 'bold', marginTop:20}}>
               Freedom Fest
             </Typography>
 

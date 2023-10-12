@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { Card, CardMedia, Box ,Typography} from '@mui/material';
+import { Card, CardMedia, Box, Typography } from '@mui/material';
+import LazyLoad from 'react-lazy-load';
 import './InfiniteImageSlider.css'; // Import a custom CSS file for styling
 
 const images = [
@@ -31,26 +32,26 @@ const OurJourney = () => {
   };
 
   return (
-    
     <Box maxWidth={600} mx="auto">
-         {/* Add the main heading */}
-      <Typography variant="h4" align="center" sx={{fontWeight:700, marginTop:2}} gutterBottom>
+      {/* Add the main heading */}
+      <Typography variant="h4" align="center" sx={{ fontWeight: 700, marginTop: 2 }} gutterBottom>
         Our Journey
       </Typography>
       <Slider {...settings}>
         {images.map((image, index) => (
           <div key={index} className="image-container">
-            <Card>
-              <CardMedia
-                component="img"
-                alt={`Image ${index + 1}`}
-                height="200"
-                width="200"
-                image={image}
-                title={`Image ${index + 1}`}
-                 
-              />
-            </Card>
+            <LazyLoad height={300}>
+              <Card>
+                <CardMedia
+                  component="img"
+                  alt={`Image ${index + 1}`}
+                  height="100%"
+                  width="100%"
+                  image ={image}
+                  title={`Image ${index + 1}`}
+                />
+              </Card>
+            </LazyLoad>
           </div>
         ))}
       </Slider>
