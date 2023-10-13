@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Button } from '@mui/material';
 import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+
 const ButtonSection = () => {
     return (
       <Box
@@ -11,7 +12,7 @@ const ButtonSection = () => {
         sx={{
           '@media (min-width: 600px)': {
             flexDirection: 'row',
-            marginTop: '100px',
+            marginTop: '160px', // Adjust the top margin as needed
             gap: '100px', // Add gap between components for screens wider than 600px
           },
           '@media (max-width: 600px)': {
@@ -66,7 +67,6 @@ const ButtonSection = () => {
         </Link>
       </Box>
     );
-  };
-  
-  export default ButtonSection;
-  
+};
+
+export default ButtonSection;
