@@ -5,7 +5,7 @@ import { Box, Typography, IconButton } from '@mui/material';
 import LazyLoad from 'react-lazy-load';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import './InfiniteImageSlider.css';
+
 
 const images = [
   'images/photo1697127465 (1).webp',
