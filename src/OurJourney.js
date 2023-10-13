@@ -8,19 +8,15 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 
 const images = [
-  'images/photo1697127465 (1).webp',
-  'images/photo1697127465.webp',
-  'images/photo1697127655.webp',
-  'images/photo1697127786.webp',
-  'images/photo1697127884.webp',
-  'images/photo1697127955.webp',
-  'images/photo1697127980.webp',
-  'images/1A551B06-DD02-47F3-8F6A-7B2D6EDE5993 (1).webp',
-  'images/2D7EB9F1-52BF-4D50-ACFC-35472F37EDCE.webp',
-  'images/93EF14F1-053B-4B90-8CD8-381D203C4F2A.webp',
-  'images/IMG_7370.webp',
-  'images/IMG_7507.webp',
-  'images/IMG_9094.webp',
+  
+  'images/WhatsApp Image 2023-10-13 at 2.01.59 PM.jpeg',
+  'images/photo1697127465.jpeg',
+  'images/photo1697127465 (1).jpeg',
+  
+  'images/WhatsApp Image 2023-10-13 at 8.30.57 AM.jpeg',
+  'images/WhatsApp Image 2023-10-13 at 2.15.56 PM.jpeg',
+  'images/WhatsApp Image 2023-10-13 at 2.16.16 PM.jpeg',
+  'images/WhatsApp Image 2023-10-13 at 8.29.48 AM.jpeg',
 ];
 
 const OurJourney = () => {
