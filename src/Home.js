@@ -40,7 +40,7 @@ const Home = () => {
 
   const redirectToRazorpay = () => {
     // Redirect to the Razorpay URL when the button is clicked
-    const registrationEndDate = new Date('2023-10-14T23:59:00'); // Set the end date to 16th midnight
+    const registrationEndDate = new Date('2023-10-16T23:59:00'); // Set the end date to 16th midnight
 
     if (new Date() > registrationEndDate) {
       // Show a popup message
@@ -82,7 +82,7 @@ const Home = () => {
             scrollamount="5"
             scrolldelay="100"
           >
-            Registration is closing soon. Please hurry up!
+            Registrations are closing soon. Please hurry up!
           </marquee>
           <LazyLoad height={250}>
             <img
