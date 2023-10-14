@@ -130,12 +130,11 @@ const Navbar = () => {
           </ScrollLink>
 
         </List>
-        <Button variant="contained" color="primary" sx={{ marginLeft: 1,marginRight:1 }}  onClick={redirectToRazorpay}>
-              Register
-        </Button>
+        
       </Drawer>
     </AppBar>
   );
 };
 
 export default Navbar;
+

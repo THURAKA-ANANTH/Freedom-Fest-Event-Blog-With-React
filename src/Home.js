@@ -4,13 +4,25 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import LazyLoad from 'react-lazy-load';
 import { Link as ScrollLink } from 'react-scroll';
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert from '@mui/material/Alert';
+import './HeroSection.css';
 
 const Home = () => {
   const [scrollingNoteVisible, setScrollingNoteVisible] = useState(true);
+  const [registrationClosed, setRegistrationClosed] = useState(false);
 
   useEffect(() => {
+    const now = new Date();
+    const registrationEndDate = new Date('2023-10-16T23:59:00'); // Set the end date to 16th midnight
+
     const timeout = setTimeout(() => {
       setScrollingNoteVisible(false);
+
+      if (now > registrationEndDate) {
+        // Set registrationClosed to true if the registration is closed
+        setRegistrationClosed(true);
+      }
     }, 20000); // Hide the note after 20 seconds
 
     return () => clearTimeout(timeout);
@@ -28,6 +40,14 @@ const Home = () => {
 
   const redirectToRazorpay = () => {
     // Redirect to the Razorpay URL when the button is clicked
+    const registrationEndDate = new Date('2023-10-14T23:59:00'); // Set the end date to 16th midnight
+
+    if (new Date() > registrationEndDate) {
+      // Show a popup message
+      setRegistrationClosed(true);
+      return;
+    }
+
     window.location.href = 'https://pages.razorpay.com/freedomfestnecg#view-1';
   };
 
@@ -55,12 +75,15 @@ const Home = () => {
           }}
         >
           <marquee
-        behavior="scroll"
-        direction="left"
-        style={{ color: 'red',marginTop:'25px', marginBottom: '5px', fontWeight: 'bold', fontSize: '1.2rem' }}
-      >
-        Registration are closing soon. Please hurry up!
-      </marquee>
+            className="smooth-marquee"
+            behavior="scroll"
+            direction="left"
+            style={{ color: 'red', marginTop: '25px', marginBottom: '5px', fontWeight: 'bold', fontSize: '1.2rem' }}
+            scrollamount="5"
+            scrolldelay="100"
+          >
+            Registration is closing soon. Please hurry up!
+          </marquee>
           <LazyLoad height={250}>
             <img
               src="images/OpenSourceTree.png"
@@ -127,6 +150,16 @@ const Home = () => {
         </div>
       )}
 
+      <Snackbar open={registrationClosed} autoHideDuration={6000} anchorOrigin={{ vertical: 'top', horizontal: 'right' }} style={{ marginTop: '50px' }}>
+        <MuiAlert
+          elevation={2}
+          variant="filled"
+          severity="warning"
+          onClose={() => setRegistrationClosed(false)}
+        >
+          Registration is closed.
+        </MuiAlert>
+      </Snackbar>
     </div>
   );
 };
