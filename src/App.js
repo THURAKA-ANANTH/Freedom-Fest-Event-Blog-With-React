@@ -44,6 +44,7 @@ function App() {
           <Element name="non-tech">
             <MediaCard3 />
           </Element>
+          
           <Element name="contact">
             <Footer />
           </Element>

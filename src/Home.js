@@ -120,7 +120,7 @@ const Home = () => {
           id="fee-note"
           className="scrolling-note"
           style={{
-            color: 'gold:',
+            color: '#00FF00',
           }}
         >
           Fee: 200/- only for all events
