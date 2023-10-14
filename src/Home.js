@@ -1,10 +1,9 @@
 import Button from '@mui/material/Button';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import LazyLoad from 'react-lazy-load';
 import { Link as ScrollLink } from 'react-scroll';
-import  { useState, useEffect } from 'react';
 
 const Home = () => {
   const [scrollingNoteVisible, setScrollingNoteVisible] = useState(true);
@@ -16,6 +15,7 @@ const Home = () => {
 
     return () => clearTimeout(timeout);
   }, []);
+
   const buttonStyle = {
     backgroundColor: '#fff',
     color: 'black',
@@ -25,7 +25,7 @@ const Home = () => {
     marginTop: '20px',
     boxShadow: '2px 2px 5px rgba(0, 0, 0, 0.2)',
   };
-  
+
   const redirectToRazorpay = () => {
     // Redirect to the Razorpay URL when the button is clicked
     window.location.href = 'https://pages.razorpay.com/freedomfestnecg#view-1';
@@ -54,13 +54,20 @@ const Home = () => {
             textAlign: 'center',
           }}
         >
+          <marquee
+        behavior="scroll"
+        direction="left"
+        style={{ color: 'red',marginTop:'25px', marginBottom: '5px', fontWeight: 'bold', fontSize: '1.2rem' }}
+      >
+        Registration are closing soon. Please hurry up!
+      </marquee>
           <LazyLoad height={250}>
             <img
               src="images/OpenSourceTree.png"
               alt="Freedom Fest Image"
               style={{
                 maxWidth: '100%',
-                height: '350px',
+                height: '330px',
                 marginBottom: '20px',
               }}
               loading="lazy"
@@ -80,7 +87,6 @@ const Home = () => {
               Freedom Fest
             </Typography>
 
-            {/* Center the "Held On" Grid */}
             <div
               style={{
                 display: 'flex',
@@ -90,7 +96,7 @@ const Home = () => {
               }}
             >
               <Typography variant="h3" style={{ fontSize: '1.5rem', fontWeight: 600, color: "yellow" }}>
-                Held On: 18th Oct - 19th Oct
+                Held On: 18th Oct & 19th Oct
               </Typography>
               <Typography variant="h3" style={{ fontSize: '1.5rem', fontWeight: 600, color: "yellow" }}>
                 Venue: NEC GUDUR
@@ -114,12 +120,13 @@ const Home = () => {
           id="fee-note"
           className="scrolling-note"
           style={{
-            color: 'red', 
+            color: 'gold:',
           }}
         >
-          Note : 200/-  only for all events 
+          Fee: 200/- only for all events
         </div>
       )}
+
     </div>
   );
 };
