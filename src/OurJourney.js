@@ -60,7 +60,7 @@ const OurJourney = () => {
     (navigator.connection.effectiveType === 'slow-2g' || navigator.connection.effectiveType === '2g');
 
   return (
-    <Box maxWidth={600} mx="auto" sx={{ marginBottom: '50px' }}>
+    <Box maxWidth={600} mx="auto" sx={{ marginBottom: '0px' }}>
       <Typography variant="h4" align="center" sx={{ fontWeight: 700, marginTop: 2 }} gutterBottom>
         Our Journey
       </Typography>

@@ -20,6 +20,7 @@ const ButtonSection = () => {
       flexDirection="column"
       alignItems="center"
       justifyContent="center"
+      marginBottom="80px"
       sx={{
         '@media (min-width: 600px)': {
           flexDirection: 'row',
@@ -31,6 +32,21 @@ const ButtonSection = () => {
         },
       }}
     >
+      <Link to="schedule" spy={true} smooth={true} offset={-70} duration={500}>
+        <Button
+          variant="contained"
+          sx={{
+            width: ['150px', '250px'],
+            height: '50px',
+            fontWeight: 'bold',
+            bgcolor: 'silver',
+            color: 'black',
+            fontFamily: '"Gill Sans", sans-serif',
+          }}
+        >
+          Schedule
+        </Button>
+      </Link>
       <Link to="workshops" spy={true} smooth={true} offset={-50} duration={500}>
         <Button
           variant="contained"
@@ -76,40 +92,8 @@ const ButtonSection = () => {
           Literary Events
         </Button>
       </Link>
-      <Button
-        variant="contained"
-        onClick={handleClickOpen}
-        sx={{
-          width: ['150px', '250px'],
-          height: '50px',
-          fontWeight: 'bold',
-          bgcolor: 'silver',
-          color: 'black',
-          fontFamily: '"Gill Sans", sans-serif',
-        }}
-      >
-        Schedule
-      </Button>
-      <Dialog open={open} onClose={handleClose}>
-        <DialogTitle>
-          Coming Soon
-          <IconButton
-            edge="end"
-            color="inherit"
-            onClick={handleClose}
-            sx={{
-              position: 'absolute',
-              top: '8px',
-              right: '8px',
-            }}
-          >
-            <CloseIcon />
-          </IconButton>
-        </DialogTitle>
-        <DialogContent>
-          The schedule will be available soon. Please check back later.
-        </DialogContent>
-      </Dialog>
+      
+      
     </Box>
   );
 };

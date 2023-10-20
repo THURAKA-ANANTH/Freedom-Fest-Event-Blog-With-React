@@ -23,7 +23,7 @@ const Home = () => {
         // Set registrationClosed to true if the registration is closed
         setRegistrationClosed(true);
       }
-    }, 20000); // Hide the note after 20 seconds
+    }, 2000000); // Hide the note after 20 seconds
 
     return () => clearTimeout(timeout);
   }, []);
@@ -74,16 +74,6 @@ const Home = () => {
             textAlign: 'center',
           }}
         >
-          <marquee
-            className="smooth-marquee"
-            behavior="scroll"
-            direction="left"
-            style={{ color: 'red', marginTop: '25px', marginBottom: '5px', fontWeight: 'bold', fontSize: '1.2rem' }}
-            scrollamount="5"
-            scrolldelay="100"
-          >
-            Registrations are closing soon. Please hurry up!
-          </marquee>
           <LazyLoad height={250}>
             <img
               src="images/OpenSourceTree.png"
